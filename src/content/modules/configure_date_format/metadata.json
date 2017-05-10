@@ -1,5 +1,10 @@
 {
 	"source" : "extend",
 	"version" : "1.0"
-	"embed" : false
+	"embed" : false,
+	"controllers" : {
+		"ConfigureDateController" : "controllers/ConfigureDateController"
+	}, 
+	"custom_acl" : ["configure_date"],
+	"admin_permission" : "configure_date"
 }

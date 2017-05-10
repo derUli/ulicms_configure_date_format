@@ -3,6 +3,6 @@
    "version" : "1.0",
    "description" : "Configure default date format",
    "categories" : ["date", "time", "clock", "strftime", "timestamp", "datetime"],
-   "compatible_from" : "2017.1",
+   "compatible_from" : "2017.3",
    "dependencies" : []
 }
