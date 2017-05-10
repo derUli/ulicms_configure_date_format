@@ -1,6 +1,9 @@
 <?php
 class ConfigureDateController extends Controller {
-	public function format($format, $time = time()) {
+	public function format($format, $time = null) {
+		if (! $time) {
+			$time = time ();
+		}
 		return date ( $format, $time );
 	}
 	public function preview() {

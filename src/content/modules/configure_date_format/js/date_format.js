@@ -1,4 +1,4 @@
-$("#date_format").change(function(){
+$("#date_format").keyup(function(){
 	var date_format = $(this).val();
 	var csrf_token = $("input[name='csrf_token']").val();
 	var data = {"date_format" : date_format,
@@ -8,6 +8,11 @@ $("#date_format").change(function(){
 		};
  
         $.post('index.php', data, function(response) {
-		$("#date_format_preview").html(response)
+		if(response.length == 0){
+
+			$("#date_format_preview").html("&nbsp;")
+		} else {
+			$("#date_format_preview").html(response)
+		}
 });
 })
