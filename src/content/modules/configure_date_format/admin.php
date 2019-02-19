@@ -1,7 +1,7 @@
 <?php
 define ( "MODULE_ADMIN_HEADLINE", get_translation ( "CONFIGURE_DATE_FORMAT" ) );
 function configure_date_format_admin() {
-	if (get_request_method () == "POST" && Request::getVar ( "save_date_format" )) {
+	if (get_request_method () == "post" && Request::getVar ( "save_date_format" )) {
 		Settings::set ( "date_format", Request::getVar ( "date_format" ), "str" );
 	}
 	$date_format = Settings::get ( "date_format" );
@@ -35,14 +35,13 @@ function configure_date_format_admin() {
 
 	<div class="row">
 		<div class="col-xs-6">
-			<button type="submit" class="btn btn-success"><?php translate("save");?></button>
-
+			<button type="submit" class="btn btn-success"><i class="fa fa-save" aria-hidden="true"></i> <?php translate("save");?></button>
 		</div>
 
 		<div class="col-xs-6 text-right">
 			<a
 				href="http://php.net/manual/<?php Template::escape(getSystemLanguage());?>/function.date.php"
-				target="_blank" class="btn btn-default"><?php translate("help");?></a>
+				target="_blank" class="btn btn-info"><i class="fa fa-question-circle" aria-hidden="true"></i> <?php translate("help");?></a>
 		</div>
 	</div>
 </form>
